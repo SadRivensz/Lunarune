@@ -6,3 +6,7 @@ publish/
 *.suo
 /probe.txt
 /test.txt
+/.dotnet-home/
+/.nuget/
+/.appdata/
+/.empty-nuget/

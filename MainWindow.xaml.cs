@@ -65,7 +65,7 @@ public partial class MainWindow : Window
         OpenFolder.Content = t.OpenFolder; SelectRune.Content = t.SelectRune; SelectProfiles.Content = t.SelectProfiles;
         Eyebrow.Text = t.Eyebrow; HeroTitle.Text = t.HeroTitle; HeroCaption.Text = t.HeroCaption;
         Count.Text = $"{t.Count} | {Profiles.Items.Count}";
-        if (string.IsNullOrWhiteSpace(_settings.ProfilesDirectory)) ProfilePath.Text = t.SelectProfiles;
+        if (string.IsNullOrWhiteSpace(_settings.ProfilesDirectory)) ProfilePath.Text = t.ProfilesPrompt;
     }
 
     private void UpdatePaths()
@@ -81,7 +81,7 @@ public partial class MainWindow : Window
             foreach (var dir in Directory.EnumerateDirectories(_settings.ProfilesDirectory).OrderBy(Path.GetFileName, StringComparer.CurrentCultureIgnoreCase))
                 Profiles.Items.Add(Path.GetFileName(dir));
         Count.Text = $"{T.Count} | {Profiles.Items.Count}";
-        if (Profiles.Items.Count == 0) Status.Text = string.IsNullOrWhiteSpace(_settings.ProfilesDirectory) ? T.SelectProfiles : T.Empty;
+        if (Profiles.Items.Count == 0) Status.Text = string.IsNullOrWhiteSpace(_settings.ProfilesDirectory) ? T.ProfilesPrompt : T.Empty;
     }
 
     private void LanguagePicker_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -95,7 +95,7 @@ public partial class MainWindow : Window
 
     private void Launch_Click(object sender, RoutedEventArgs e)
     {
-        if (string.IsNullOrWhiteSpace(_settings.RuneLiteExe) || !File.Exists(_settings.RuneLiteExe)) { Status.Text = T.SelectRune; return; }
+        if (string.IsNullOrWhiteSpace(_settings.RuneLiteExe) || !File.Exists(_settings.RuneLiteExe)) { Status.Text = T.RuneMissing; return; }
         try { Process.Start(new ProcessStartInfo(_settings.RuneLiteExe) { UseShellExecute = true }); Status.Text = T.Launched; }
         catch (Exception ex) { Status.Text = T.LaunchError + ex.Message; }
     }
@@ -144,5 +144,5 @@ public partial class MainWindow : Window
         public string Language { get; set; } = "pt-BR";
     }
     private sealed record LanguageItem(string Code, string Name);
-    private sealed record UiText(string Language, string Subtitle, string Section, string Count, string Description, string KeepOpen, string Launch, string OpenFolder, string SelectRune, string SelectProfiles, string Eyebrow, string HeroTitle, string HeroCaption, string Empty, string RuneMissing, string Launched, string LaunchError);
+    private sealed record UiText(string Language, string Subtitle, string Section, string Count, string Description, string KeepOpen, string Launch, string OpenFolder, string SelectRune, string SelectProfiles, string Eyebrow, string HeroTitle, string HeroCaption, string ProfilesPrompt, string Empty, string RuneMissing, string Launched, string LaunchError);
 }
