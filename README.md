@@ -1,12 +1,12 @@
 # Lunarune
 
-Aplicativo Windows em C# WPF para listar diretórios de perfil e abrir o RuneLite. O repositório começa sem caminhos pessoais ou dados de conta; selecione RuneLite.exe e a pasta credentials no próprio app.
+Aplicativo Windows em C# WPF para listar diretórios de perfil e abrir o RuneLite. Selecione o executável e a pasta de perfis pela interface; o repositório não inclui caminhos pessoais configurados.
 
 ## Privacidade e comportamento
 
-As preferências locais guardam apenas os caminhos escolhidos pelo usuário e o idioma. O Lunarune não lê, copia, importa ou modifica arquivos de autenticação, tokens, senhas ou dados de contas. A lista de perfis mostra somente nomes de subpastas em memória. O launcher abre o executável RuneLite escolhido e mantém o painel aberto.
+As preferências locais guardam apenas os caminhos escolhidos e o idioma. O Lunarune não lê, copia, importa ou modifica arquivos de autenticação, tokens, senhas ou dados de contas. A lista de perfis mostra os nomes das subpastas apenas durante a execução. O app abre o executável RuneLite escolhido e permanece aberto.
 
-O script PowerShell anterior está fora deste projeto e permanece intacto.
+O script PowerShell anterior está fora deste projeto e não é alterado por ele.
 
 ## Idiomas
 
@@ -14,11 +14,10 @@ Português, inglês, espanhol, francês, alemão e japonês. A seleção é salv
 
 ## Compilar no Windows
 
-Instale o SDK .NET 10 e execute na pasta do projeto:
+Instale o SDK .NET 10 e execute:
 
 ```powershell
-dotnet build -c Release
-dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -o publish
+dotnet publish .\Lunarune.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o .\publish
 ```
 
-O projeto usa `WinExe`, ícone da Emilia e imagem incorporada. A atualização automática será adicionada depois que a primeira versão compilável estiver disponível; a proposta é usar Velopack com artefatos publicados em GitHub Releases ou hospedagem estática.
+O projeto usa `WinExe`, ícone da Emilia e imagem incorporada. Para downloads públicos, publique o código no GitHub e anexe o ZIP da pasta `publish` a uma Release. Atualização automática ainda precisa ser integrada.
