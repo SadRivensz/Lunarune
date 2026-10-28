@@ -2,6 +2,8 @@
 
 **Um companheiro visual para abrir o RuneLite e consultar suas pastas de perfil no Windows.**
 
+**Leia em:** [English](README.en.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [日本語](README.ja.md)
+
 ## Baixar
 
 - [Baixar o Lunarune.exe da versão mais recente](https://github.com/SadRivensz/Lunarune/releases/latest/download/Lunarune.exe)
