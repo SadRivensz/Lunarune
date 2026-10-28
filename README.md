@@ -13,6 +13,10 @@ O executável publicado é para Windows x64 e inclui o runtime necessário. Não
 
 Como o aplicativo ainda não tem assinatura digital, o Windows pode exibir um aviso de segurança ao abrir. Confira se o arquivo veio da página oficial de Releases do projeto antes de executá-lo.
 
+### Análise no VirusTotal
+
+O arquivo `Lunarune.dll` foi analisado pelo VirusTotal e, nessa análise, **0 de 67 mecanismos** o sinalizaram como malicioso: [ver relatório](https://www.virustotal.com/gui/file/39b88888d076aabce1b3f40c88b40a5711f33b0f2f48455e8701151979a224fa). O relatório corresponde somente ao arquivo identificado por esse hash; confira se o arquivo distribuído na Release é exatamente o mesmo antes de usar o resultado como referência. Uma análise sem detecções não garante risco zero.
+
 ## Configuração inicial
 
 1. Abra o Lunarune.
