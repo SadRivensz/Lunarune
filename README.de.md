@@ -22,6 +22,15 @@ Da die App noch nicht digital signiert ist, kann Windows eine Sicherheitswarnung
 
 Die Liste zeigt die Unterordner des ausgewählten Verzeichnisses. Wenn keine Profile erscheinen, prüfen Sie, ob Sie den richtigen Ordner gewählt haben. Die Schaltfläche für den Ordner öffnet den Speicherort im Datei-Explorer.
 
+## Ordner unter Windows finden
+
+Öffnen Sie den Datei-Explorer mit **Win + E**. Um direkt zu einem Ordner zu wechseln, drücken Sie **Strg + L**, fügen Sie den Pfad in die Adressleiste ein und drücken Sie **Enter**.
+
+- **RuneLite-Ordner:** `%LOCALAPPDATA%\RuneLite`. Suchen Sie im Dateiauswahldialog von Lunarune dort nach `RuneLite.exe` und wählen Sie die Datei aus. Der vollständige Pfad lautet normalerweise `C:\Users\Ihr-Windows-Benutzer\AppData\Local\RuneLite`.
+- **Profilordner:** `%USERPROFILE%\.runelite\credentials`. Wählen Sie diesen Ordner über die Schaltfläche zum Suchen des credentials-Ordners in Lunarune aus. Der vollständige Pfad lautet normalerweise `C:\Users\Ihr-Windows-Benutzer\.runelite\credentials`.
+
+Windows ersetzt `%LOCALAPPDATA%` und `%USERPROFILE%` automatisch durch die Pfade Ihres Benutzerkontos. Sie müssen `Ihr-Windows-Benutzer` nicht manuell ändern. Der Ordner `.runelite` kann ausgeblendet sein; über den vollständigen Pfad in der Adressleiste lässt er sich trotzdem öffnen. Liegt ein Ordner an einem anderen Ort, wählen Sie in Lunarune den tatsächlichen Speicherort aus.
+
 ## RuneLite starten
 
 **Weitere Instanz öffnen** startet die ausgewählte RuneLite-Datei und lässt Lunarune geöffnet. Eine Zeile auszuwählen hebt das Profil nur in der Liste hervor; dadurch wird weder das Konto gewechselt noch eine automatische Anmeldung ausgeführt. Die Anmeldung erfolgt weiterhin über RuneLite und dessen offizielle Wege.

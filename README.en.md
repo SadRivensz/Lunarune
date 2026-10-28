@@ -22,6 +22,15 @@ Because the app is not digitally signed, Windows may show a security warning. Ma
 
 The list shows subfolders inside the selected directory. If no profiles appear, check that you selected the correct folder. The folder button opens that location in File Explorer.
 
+## Finding the folders on Windows
+
+Open File Explorer with **Win + E**. To jump directly to a folder, press **Ctrl + L**, paste the path below into the address bar, and press **Enter**.
+
+- **RuneLite folder:** `%LOCALAPPDATA%\RuneLite`. In the Lunarune file picker, find and select `RuneLite.exe` in this folder. The full path is usually `C:\Users\your-Windows-user\AppData\Local\RuneLite`.
+- **Profile folder:** `%USERPROFILE%\.runelite\credentials`. Select this folder with Lunarune’s credentials-folder button. The full path is usually `C:\Users\your-Windows-user\.runelite\credentials`.
+
+Windows expands `%LOCALAPPDATA%` and `%USERPROFILE%` to match your account, so you do not need to replace `your-Windows-user` yourself. The `.runelite` folder may be hidden, but pasting its full path into the address bar still opens it. If either folder is elsewhere on your computer, locate the actual folder and select it in Lunarune.
+
 ## Opening RuneLite
 
 **Open another instance** starts the selected RuneLite executable and leaves Lunarune open. Selecting a row only highlights a profile in the list; it does not switch accounts or sign in automatically. Authentication remains with RuneLite and its official sign-in flow.

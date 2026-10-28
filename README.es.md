@@ -22,6 +22,15 @@ Como la aplicación aún no tiene firma digital, Windows puede mostrar un aviso 
 
 La lista muestra las subcarpetas del directorio seleccionado. Si no aparece ningún perfil, comprueba que elegiste la carpeta correcta. El botón de carpeta abre esa ubicación en el Explorador de archivos.
 
+## Encontrar las carpetas en Windows
+
+Abre el Explorador de archivos con **Win + E**. Para ir directamente a una carpeta, pulsa **Ctrl + L**, pega la ruta siguiente en la barra de direcciones y pulsa **Enter**.
+
+- **Carpeta de RuneLite:** `%LOCALAPPDATA%\RuneLite`. En el selector de archivos de Lunarune, busca y elige `RuneLite.exe` dentro de esta carpeta. La ruta completa suele ser `C:\Users\tu-usuario-de-Windows\AppData\Local\RuneLite`.
+- **Carpeta de perfiles:** `%USERPROFILE%\.runelite\credentials`. Elige esta carpeta con el botón para localizar credentials de Lunarune. La ruta completa suele ser `C:\Users\tu-usuario-de-Windows\.runelite\credentials`.
+
+Windows reemplaza `%LOCALAPPDATA%` y `%USERPROFILE%` por las rutas de tu usuario; no tienes que cambiar `tu-usuario-de-Windows`. La carpeta `.runelite` puede estar oculta, pero pegar la ruta completa en la barra de direcciones permite abrirla. Si alguna carpeta está en otra ubicación, selecciona la ubicación real en Lunarune.
+
 ## Al abrir RuneLite
 
 **Abrir otra instancia** inicia el ejecutable de RuneLite seleccionado y deja Lunarune abierto. Seleccionar una fila solo resalta un perfil; no cambia de cuenta ni inicia sesión automáticamente. La autenticación sigue gestionándose en RuneLite mediante sus métodos oficiales.

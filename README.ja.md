@@ -22,6 +22,15 @@
 
 一覧には選択したフォルダー直下のサブフォルダーが表示されます。何も表示されない場合は、選択した場所を確認してください。フォルダーボタンを押すと、選択した場所がエクスプローラーで開きます。
 
+## Windows でフォルダーを見つける
+
+**Win + E** でエクスプローラーを開きます。フォルダーへ直接移動するには、**Ctrl + L** を押し、次のパスをアドレスバーに貼り付けて **Enter** を押してください。
+
+- **RuneLite フォルダー:** `%LOCALAPPDATA%\RuneLite`。Lunarune のファイル選択画面で、このフォルダー内の `RuneLite.exe` を選択します。通常のフルパスは `C:\Users\Windowsのユーザー名\AppData\Local\RuneLite` です。
+- **プロフィールフォルダー:** `%USERPROFILE%\.runelite\credentials`。Lunarune の credentials フォルダー選択ボタンからこのフォルダーを選びます。通常のフルパスは `C:\Users\Windowsのユーザー名\.runelite\credentials` です。
+
+Windows が `%LOCALAPPDATA%` と `%USERPROFILE%` を現在のユーザーのパスに置き換えるため、ユーザー名を手動で変更する必要はありません。`.runelite` は隠しフォルダーの場合がありますが、フルパスをアドレスバーに貼り付ければ開けます。フォルダーが別の場所にある場合は、実際の場所を Lunarune で選択してください。
+
 ## RuneLite の起動
 
 **別のインスタンスを開く**を押すと、選択した RuneLite を起動し、Lunarune の画面は開いたままになります。一覧のプロフィールを選択しても、ハイライト表示されるだけです。アカウントの切り替えや自動ログインは行いません。認証は RuneLite とその公式の方法で行ってください。

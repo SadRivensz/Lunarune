@@ -22,6 +22,15 @@ L’application n’étant pas encore signée numériquement, Windows peut affic
 
 La liste affiche les sous-dossiers du répertoire choisi. Si aucun profil n’apparaît, vérifiez le dossier sélectionné. Le bouton du dossier ouvre cet emplacement dans l’Explorateur de fichiers.
 
+## Trouver les dossiers sous Windows
+
+Ouvrez l’Explorateur de fichiers avec **Win + E**. Pour accéder directement à un dossier, appuyez sur **Ctrl + L**, collez le chemin ci-dessous dans la barre d’adresse, puis appuyez sur **Entrée**.
+
+- **Dossier RuneLite :** `%LOCALAPPDATA%\RuneLite`. Dans la fenêtre de sélection de Lunarune, recherchez et choisissez `RuneLite.exe` dans ce dossier. Le chemin complet ressemble généralement à `C:\Users\votre-utilisateur-Windows\AppData\Local\RuneLite`.
+- **Dossier des profils :** `%USERPROFILE%\.runelite\credentials`. Sélectionnez ce dossier avec le bouton de recherche du dossier credentials dans Lunarune. Le chemin complet ressemble généralement à `C:\Users\votre-utilisateur-Windows\.runelite\credentials`.
+
+Windows remplace `%LOCALAPPDATA%` et `%USERPROFILE%` par les chemins de votre compte ; vous n’avez pas à modifier `votre-utilisateur-Windows`. Le dossier `.runelite` peut être masqué, mais le chemin complet collé dans la barre d’adresse permet de l’ouvrir. Si l’un des dossiers se trouve ailleurs, choisissez son emplacement réel dans Lunarune.
+
 ## Ouverture de RuneLite
 
 **Ouvrir une autre instance** lance l’exécutable RuneLite sélectionné et laisse Lunarune ouvert. La sélection d’une ligne ne fait que mettre un profil en surbrillance ; elle ne change pas de compte et ne connecte pas automatiquement. L’authentification reste gérée par RuneLite et ses moyens officiels.

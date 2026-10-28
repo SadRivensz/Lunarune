@@ -22,6 +22,15 @@ Como o aplicativo ainda não tem assinatura digital, o Windows pode exibir um av
 
 A lista mostra as subpastas encontradas no diretório selecionado. Se não aparecer nenhum perfil, confira se você escolheu a pasta correta. O botão para abrir a pasta leva ao diretório selecionado no Explorador de Arquivos.
 
+## Onde localizar as pastas no Windows
+
+Abra o Explorador de Arquivos com **Win + E**. Para ir direto a uma pasta, pressione **Ctrl + L**, cole o caminho abaixo na barra de endereço e pressione **Enter**.
+
+- **Pasta do RuneLite:** `%LOCALAPPDATA%\RuneLite`. Nesse local, procure e selecione `RuneLite.exe` na janela do Lunarune. O caminho completo normalmente fica em `C:\Users\seu-usuário\AppData\Local\RuneLite`.
+- **Pasta de perfis:** `%USERPROFILE%\.runelite\credentials`. Selecione essa pasta no botão de localizar a pasta credentials. O caminho completo normalmente fica em `C:\Users\seu-usuário\.runelite\credentials`.
+
+O Windows substitui `%LOCALAPPDATA%` e `%USERPROFILE%` pelos caminhos do seu próprio usuário; não troque `seu-usuário` manualmente. A pasta `.runelite` pode estar oculta, mas colar o caminho completo na barra de endereço funciona mesmo assim. Se uma pasta não existir nesses locais, procure a instalação/perfis em outro local e selecione a pasta correta na janela do Lunarune.
+
 ## O que acontece ao abrir o RuneLite
 
 **Abrir outra instância** inicia o executável RuneLite selecionado e deixa o Lunarune aberto. A seleção de uma linha serve para destacar um perfil na lista; ela não troca a conta nem realiza login automático. A autenticação continua sendo feita pelo próprio RuneLite e pelos meios oficiais.
