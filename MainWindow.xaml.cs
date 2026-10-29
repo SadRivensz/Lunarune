@@ -141,12 +141,28 @@ public partial class MainWindow : Window
 
     private static string? FirstValue(params string?[] values) => values.FirstOrDefault(value => !string.IsNullOrWhiteSpace(value))?.Trim();
 
-    private void Launch_Click(object sender, RoutedEventArgs e)
+    private static readonly string RuneLiteCreds = Path.Combine(
+    Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".runelite", "credentials.properties");
+
+private async void Launch_Click(object sender, RoutedEventArgs e)
+{
+    if (string.IsNullOrWhiteSpace(_settings.RuneLiteExe) || !File.Exists(_settings.RuneLiteExe)) { Status.Text = T.RuneMissing; return; }
+    if (Profiles.SelectedItem is not string profile) { Status.Text = "Selecione um perfil na lista."; return; }
+    var src = Path.Combine(_settings.ProfilesDirectory, profile, "credentials.properties");
+    if (!File.Exists(src)) { Status.Text = $"credentials.properties não encontrado em '{profile}'."; return; }
+    try
     {
-        if (string.IsNullOrWhiteSpace(_settings.RuneLiteExe) || !File.Exists(_settings.RuneLiteExe)) { Status.Text = T.RuneMissing; return; }
-        try { Process.Start(new ProcessStartInfo(_settings.RuneLiteExe) { UseShellExecute = true }); Status.Text = T.Launched; }
-        catch (Exception ex) { Status.Text = T.LaunchError + ex.Message; }
+        Launch.IsEnabled = false;
+        Directory.CreateDirectory(Path.GetDirectoryName(RuneLiteCreds)!);
+        if (File.Exists(RuneLiteCreds) && !File.Exists(RuneLiteCreds + ".bak")) File.Copy(RuneLiteCreds, RuneLiteCreds + ".bak");
+        File.Copy(src, RuneLiteCreds, overwrite: true);
+        Process.Start(new ProcessStartInfo(_settings.RuneLiteExe) { UseShellExecute = true });
+        Status.Text = T.Launched;
+        await Task.Delay(5000); // dá tempo de o RuneLite ler o arquivo antes de outra troca
     }
+    catch (Exception ex) { Status.Text = T.LaunchError + ex.Message; }
+    finally { Launch.IsEnabled = true; }
+}
 
     private void SelectRune_Click(object sender, RoutedEventArgs e)
     {
