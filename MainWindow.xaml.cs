@@ -19,12 +19,12 @@ public partial class MainWindow : Window
 
     private static readonly Dictionary<string, UiText> Texts = new()
     {
-        ["pt-BR"] = new("Português", "Companheiro do RuneLite", "SUA AVENTURA", "Perfis locais", "Pastas encontradas no diretório configurado.", "O painel permanece aberto enquanto você joga.", "ABRIR OUTRA INSTÂNCIA", "Abrir pasta de perfis", "Localizar RuneLite.exe...", "Localizar pasta credentials...", "RE:ZERO | EMILIA", "Uma nova aventura começa aqui.", "Lunarune | seu launcher pessoal", "Selecione a pasta credentials para listar perfis.", "Nenhum perfil encontrado.", "Selecione RuneLite.exe para continuar.", "RuneLite aberto.", "Não foi possível abrir: "),
-        ["en-US"] = new("English", "RuneLite companion", "YOUR ADVENTURE", "Local profiles", "Folders found in the configured directory.", "The panel stays open while you play.", "OPEN ANOTHER INSTANCE", "Open profiles folder", "Locate RuneLite.exe...", "Locate credentials folder...", "RE:ZERO | EMILIA", "A new journey starts here.", "Lunarune | your personal game launcher", "Select the credentials folder to list profiles.", "No profiles found.", "Select RuneLite.exe to continue.", "RuneLite opened.", "Could not open: "),
-        ["es-ES"] = new("Español", "Compañero de RuneLite", "TU AVENTURA", "Perfiles locales", "Carpetas del directorio configurado.", "El panel permanece abierto mientras juegas.", "ABRIR OTRA INSTANCIA", "Abrir carpeta de perfiles", "Buscar RuneLite.exe...", "Buscar carpeta credentials...", "RE:ZERO | EMILIA", "Una nueva aventura comienza aquí.", "Lunarune | tu launcher personal", "Selecciona credentials para listar perfiles.", "No se encontraron perfiles.", "Selecciona RuneLite.exe para continuar.", "RuneLite abierto.", "No se pudo abrir: "),
-        ["fr-FR"] = new("Français", "Compagnon RuneLite", "VOTRE AVENTURE", "Profils locaux", "Dossiers du répertoire configuré.", "Le panneau reste ouvert pendant le jeu.", "OUVRIR UNE AUTRE INSTANCE", "Ouvrir le dossier des profils", "Localiser RuneLite.exe...", "Choisir le dossier credentials...", "RE:ZERO | EMILIA", "Une nouvelle aventure commence ici.", "Lunarune | votre lanceur personnel", "Choisissez credentials pour lister les profils.", "Aucun profil trouvé.", "Choisissez RuneLite.exe pour continuer.", "RuneLite est ouvert.", "Impossible d’ouvrir : "),
-        ["de-DE"] = new("Deutsch", "RuneLite-Begleiter", "DEIN ABENTEUER", "Lokale Profile", "Ordner im ausgewählten Verzeichnis.", "Das Fenster bleibt beim Spielen geöffnet.", "WEITERE INSTANZ ÖFFNEN", "Profilordner öffnen", "RuneLite.exe suchen...", "credentials-Ordner suchen...", "RE:ZERO | EMILIA", "Ein neues Abenteuer beginnt hier.", "Lunarune | dein persönlicher Game-Launcher", "Wähle den credentials-Ordner zum Anzeigen der Profile.", "Keine Profile gefunden.", "Wähle RuneLite.exe aus.", "RuneLite wurde geöffnet.", "Öffnen fehlgeschlagen: "),
-        ["ja-JP"] = new("日本語", "RuneLite コンパニオン", "冒険へようこそ", "ローカルプロフィール", "設定したフォルダー内の項目です。", "ゲーム中もパネルは開いたままです。", "別のインスタンスを開く", "プロフィールフォルダーを開く", "RuneLite.exe の場所...", "credentials フォルダーの場所...", "RE:ZERO | エミリア", "新しい冒険がここから始まる。", "Lunarune | あなた専用ランチャー", "プロフィールを表示するには credentials を選択してください。", "プロフィールが見つかりません。", "RuneLite.exe を選択してください。", "RuneLite を起動しました。", "起動できませんでした: ")
+        ["pt-BR"] = new("Português", "Companheiro do RuneLite", "SUA AVENTURA", "Perfis locais", "Pastas encontradas no diretório configurado.", "O painel permanece aberto enquanto você joga.", "ABRIR OUTRA INSTÂNCIA", "Abrir pasta de perfis", "Localizar RuneLite.exe...", "Localizar pasta credentials...", "Importar configuração anterior...", "Configuração importada.", "Nenhuma configuração compatível foi encontrada.", "Falha ao importar: ", "RE:ZERO | EMILIA", "Uma nova aventura começa aqui.", "Lunarune | seu launcher pessoal", "Selecione a pasta credentials para listar perfis.", "Nenhum perfil encontrado.", "Selecione RuneLite.exe para continuar.", "RuneLite aberto.", "Não foi possível abrir: "),
+        ["en-US"] = new("English", "RuneLite companion", "YOUR ADVENTURE", "Local profiles", "Folders found in the configured directory.", "The panel stays open while you play.", "OPEN ANOTHER INSTANCE", "Open profiles folder", "Locate RuneLite.exe...", "Locate credentials folder...", "Import previous settings...", "Settings imported.", "No compatible settings were found.", "Import failed: ", "RE:ZERO | EMILIA", "A new journey starts here.", "Lunarune | your personal game launcher", "Select the credentials folder to list profiles.", "No profiles found.", "Select RuneLite.exe to continue.", "RuneLite opened.", "Could not open: "),
+        ["es-ES"] = new("Español", "Compañero de RuneLite", "TU AVENTURA", "Perfiles locales", "Carpetas del directorio configurado.", "El panel permanece abierto mientras juegas.", "ABRIR OTRA INSTANCIA", "Abrir carpeta de perfiles", "Buscar RuneLite.exe...", "Buscar carpeta credentials...", "Importar configuración anterior...", "Configuración importada.", "No se encontró una configuración compatible.", "Error al importar: ", "RE:ZERO | EMILIA", "Una nueva aventura comienza aquí.", "Lunarune | tu launcher personal", "Selecciona credentials para listar perfiles.", "No se encontraron perfiles.", "Selecciona RuneLite.exe para continuar.", "RuneLite abierto.", "No se pudo abrir: "),
+        ["fr-FR"] = new("Français", "Compagnon RuneLite", "VOTRE AVENTURE", "Profils locaux", "Dossiers du répertoire configuré.", "Le panneau reste ouvert pendant le jeu.", "OUVRIR UNE AUTRE INSTANCE", "Ouvrir le dossier des profils", "Localiser RuneLite.exe...", "Choisir le dossier credentials...", "Importer les anciens paramètres...", "Paramètres importés.", "Aucun paramètre compatible trouvé.", "Échec de l’importation : ", "RE:ZERO | EMILIA", "Une nouvelle aventure commence ici.", "Lunarune | votre lanceur personnel", "Choisissez credentials pour lister les profils.", "Aucun profil trouvé.", "Choisissez RuneLite.exe pour continuer.", "RuneLite est ouvert.", "Impossible d’ouvrir : "),
+        ["de-DE"] = new("Deutsch", "RuneLite-Begleiter", "DEIN ABENTEUER", "Lokale Profile", "Ordner im ausgewählten Verzeichnis.", "Das Fenster bleibt beim Spielen geöffnet.", "WEITERE INSTANZ ÖFFNEN", "Profilordner öffnen", "RuneLite.exe suchen...", "credentials-Ordner suchen...", "Vorherige Einstellungen importieren...", "Einstellungen importiert.", "Keine kompatiblen Einstellungen gefunden.", "Import fehlgeschlagen: ", "RE:ZERO | EMILIA", "Ein neues Abenteuer beginnt hier.", "Lunarune | dein persönlicher Game-Launcher", "Wähle den credentials-Ordner zum Anzeigen der Profile.", "Keine Profile gefunden.", "Wähle RuneLite.exe aus.", "RuneLite wurde geöffnet.", "Öffnen fehlgeschlagen: "),
+        ["ja-JP"] = new("日本語", "RuneLite コンパニオン", "冒険へようこそ", "ローカルプロフィール", "設定したフォルダー内の項目です。", "ゲーム中もパネルは開いたままです。", "別のインスタンスを開く", "プロフィールフォルダーを開く", "RuneLite.exe の場所...", "credentials フォルダーの場所...", "以前の設定をインポート...", "設定をインポートしました。", "対応する設定が見つかりません。", "インポートに失敗しました: ", "RE:ZERO | エミリア", "新しい冒険がここから始まる。", "Lunarune | あなた専用ランチャー", "プロフィールを表示するには credentials を選択してください。", "プロフィールが見つかりません。", "RuneLite.exe を選択してください。", "RuneLite を起動しました。", "起動できませんでした: ")
     };
 
     private UiText T => Texts.GetValueOrDefault(_settings.Language, Texts["pt-BR"]);
@@ -63,6 +63,7 @@ public partial class MainWindow : Window
         Title = $"Lunarune | {t.Subtitle}"; Subtitle.Text = t.Subtitle; Section.Text = t.Section;
         Description.Text = t.Description; KeepOpen.Text = t.KeepOpen; Launch.Content = t.Launch;
         OpenFolder.Content = t.OpenFolder; SelectRune.Content = t.SelectRune; SelectProfiles.Content = t.SelectProfiles;
+        ImportSettings.Content = t.ImportSettings;
         Eyebrow.Text = t.Eyebrow; HeroTitle.Text = t.HeroTitle; HeroCaption.Text = t.HeroCaption;
         Count.Text = $"{t.Count} | {Profiles.Items.Count}";
         if (string.IsNullOrWhiteSpace(_settings.ProfilesDirectory)) ProfilePath.Text = t.ProfilesPrompt;
@@ -92,6 +93,53 @@ public partial class MainWindow : Window
     }
 
     private void Profiles_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
+
+    private void ImportSettings_Click(object sender, RoutedEventArgs e)
+    {
+        var dialog = new OpenFileDialog
+        {
+            Title = T.ImportSettings,
+            Filter = "JSON settings (*.json)|*.json|All files (*.*)|*.*",
+            CheckFileExists = true,
+            Multiselect = false
+        };
+        if (dialog.ShowDialog(this) != true) return;
+
+        try
+        {
+            var imported = JsonSerializer.Deserialize<LegacySettings>(File.ReadAllText(dialog.FileName), new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            if (imported is null)
+            {
+                Status.Text = T.ImportNotFound;
+                return;
+            }
+
+            var runeExe = FirstValue(imported.RuneLiteExe, imported.RuneLitePath, imported.RuneLiteExecutable);
+            var profiles = FirstValue(imported.ProfilesDirectory, imported.CredentialsDirectory, imported.CredentialsPath, imported.ProfilePath);
+            var language = FirstValue(imported.Language, imported.LanguageCode);
+            if (runeExe is null && profiles is null && (language is null || !Texts.ContainsKey(language)))
+            {
+                Status.Text = T.ImportNotFound;
+                return;
+            }
+
+            if (runeExe is not null) _settings.RuneLiteExe = runeExe;
+            if (profiles is not null) _settings.ProfilesDirectory = profiles;
+            if (language is not null && Texts.ContainsKey(language)) _settings.Language = language;
+            SaveSettings();
+            LanguagePicker.SelectedValue = _settings.Language;
+            ApplyLanguage();
+            RefreshProfiles();
+            UpdatePaths();
+            Status.Text = T.Imported;
+        }
+        catch (Exception ex)
+        {
+            Status.Text = T.ImportError + ex.Message;
+        }
+    }
+
+    private static string? FirstValue(params string?[] values) => values.FirstOrDefault(value => !string.IsNullOrWhiteSpace(value))?.Trim();
 
     private void Launch_Click(object sender, RoutedEventArgs e)
     {
@@ -143,6 +191,18 @@ public partial class MainWindow : Window
         public string ProfilesDirectory { get; set; } = "";
         public string Language { get; set; } = "pt-BR";
     }
+    private sealed class LegacySettings
+    {
+        public string? RuneLiteExe { get; set; }
+        public string? RuneLitePath { get; set; }
+        public string? RuneLiteExecutable { get; set; }
+        public string? ProfilesDirectory { get; set; }
+        public string? CredentialsDirectory { get; set; }
+        public string? CredentialsPath { get; set; }
+        public string? ProfilePath { get; set; }
+        public string? Language { get; set; }
+        public string? LanguageCode { get; set; }
+    }
     private sealed record LanguageItem(string Code, string Name);
-    private sealed record UiText(string Language, string Subtitle, string Section, string Count, string Description, string KeepOpen, string Launch, string OpenFolder, string SelectRune, string SelectProfiles, string Eyebrow, string HeroTitle, string HeroCaption, string ProfilesPrompt, string Empty, string RuneMissing, string Launched, string LaunchError);
+    private sealed record UiText(string Language, string Subtitle, string Section, string Count, string Description, string KeepOpen, string Launch, string OpenFolder, string SelectRune, string SelectProfiles, string ImportSettings, string Imported, string ImportNotFound, string ImportError, string Eyebrow, string HeroTitle, string HeroCaption, string ProfilesPrompt, string Empty, string RuneMissing, string Launched, string LaunchError);
 }

@@ -30,6 +30,8 @@ A lista mostra as subpastas encontradas no diretório selecionado. Se não apare
 
 Abra o Explorador de Arquivos com **Win + E**. Para ir direto a uma pasta, pressione **Ctrl + L**, cole o caminho abaixo na barra de endereço e pressione **Enter**.
 
+Você também pode pressionar **Win + R**, digitar `%USERPROFILE%\.runelite` e pressionar **Enter** para abrir a pasta de configuração do RuneLite. Dentro dela, procure `credentials`; essa é a pasta que deve ser selecionada no Lunarune. Se `credentials` não existir, conclua a configuração e a autenticação pelo RuneLite e pelos meios oficiais. O Lunarune apenas lista as pastas encontradas: ele não cria a pasta nem salva, importa ou altera credenciais.
+
 - **Pasta do RuneLite:** `%LOCALAPPDATA%\RuneLite`. Nesse local, procure e selecione `RuneLite.exe` na janela do Lunarune. O caminho completo normalmente fica em `C:\Users\seu-usuário\AppData\Local\RuneLite`.
 - **Pasta de perfis:** `%USERPROFILE%\.runelite\credentials`. Selecione essa pasta no botão de localizar a pasta credentials. O caminho completo normalmente fica em `C:\Users\seu-usuário\.runelite\credentials`.
 
@@ -46,6 +48,8 @@ O Lunarune não lê o conteúdo dos arquivos de autenticação, não copia nem a
 As únicas preferências gravadas localmente são os caminhos que você escolheu para o RuneLite e para a pasta de perfis, além do idioma. Elas ficam em:
 
 `%LOCALAPPDATA%\Lunarune\settings.json`
+
+Para reaproveitar preferências de uma versão anterior, use **Importar configuração anterior...** e selecione o arquivo JSON antigo. O Lunarune importa somente os caminhos do RuneLite e da pasta de perfis e o idioma; não importa arquivos de autenticação.
 
 Os nomes das subpastas são exibidos na lista durante o uso, mas não são gravados nas preferências. O aplicativo não envia esses dados pela internet. A pasta `credentials` permanece no seu computador: **não a envie para o GitHub nem compartilhe seus arquivos de autenticação**.
 
